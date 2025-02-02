@@ -91,7 +91,16 @@ header {
   align-items: center;
 }
 
-section img {
+.home-img img {
+  width: 30vw;
+  animation: floatImage 4s ease-in-out infinite;
+  transition: 0.5s ease;
+  border-radius: 40%;
+  box-shadow: 0 0 30px var(--head-b-color);
+  cursor: pointer;
+}
+
+/* section img {
   width: 50%;
   height: 50%;
   position: relative;
@@ -100,4 +109,21 @@ section img {
   justify-content: center;
   align-items: center;
   margin: auto;
+} */
+
+.home-img img:hover {
+  box-shadow: 0 0 30px var(--head-b-color), 0 0 50px var(--head-b-color),
+    0 0 80px var(--head-b-color);
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
